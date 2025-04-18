@@ -1,7 +1,7 @@
 package Allcode;
 
 import java.util.*;
-public class SecondMax {
+public class MinArray {
 
 	public static void main(String x[]) {
 		
@@ -14,33 +14,36 @@ public class SecondMax {
 		
 		System.out.println("Enter " + size + " Element Of An Array");
 		
-		for(int i = 0 ; i <= a.length - 1 ; i++) {
+		for(int i = 0 ; i <= a.length - 1; i++) {
 			
 			a[i] = data.nextInt();
 			
 		}
 		
-		int secondmax = a[0];
-		int max = a[0];
+		int secondmin = a[0];
+		int min = a[0];
 		
 		for(int i = 0 ; i <= a.length - 1 ; i++) {
 			
-			if(a[i] > max) {
+			if(a[i] < min) {
 				
-				secondmax = max;
-				max = a[i];
+				secondmin = min;
+				min = a[i];
 				
 			}
-			else if(a[i] > secondmax && a[i] < max) {
+			else if(a[i] < secondmin && a[i] > min) {
 				
-				secondmax = a[i];
+				secondmin = a[i];
 				
 			}
 			
 		}
 		
-		System.out.println("Second Max is :- " + secondmax);
+		System.out.println("Second Smallest Element is :- " + secondmin);
+		
 		
 	}
+	
+	
 	
 }
